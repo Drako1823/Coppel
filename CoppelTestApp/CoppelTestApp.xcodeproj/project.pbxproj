@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		4E77F228293FD76900AB541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F227293FD76900AB541E /* AppDelegate.swift */; };
 		4E77F22A293FD76900AB541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F229293FD76900AB541E /* SceneDelegate.swift */; };
-		4E77F22C293FD76900AB541E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F22B293FD76900AB541E /* ViewController.swift */; };
-		4E77F22F293FD76900AB541E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E77F22D293FD76900AB541E /* Main.storyboard */; };
+		4E77F22C293FD76900AB541E /* MoviesHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F22B293FD76900AB541E /* MoviesHomeViewController.swift */; };
+		4E77F22F293FD76900AB541E /* MoviesHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E77F22D293FD76900AB541E /* MoviesHome.storyboard */; };
 		4E77F231293FD76A00AB541E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E77F230293FD76A00AB541E /* Assets.xcassets */; };
 		4E77F234293FD76A00AB541E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E77F232293FD76A00AB541E /* LaunchScreen.storyboard */; };
 		4E77F23F293FD76A00AB541E /* coppelTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F23E293FD76A00AB541E /* coppelTestAppTests.swift */; };
 		4E77F249293FD76A00AB541E /* coppelTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F248293FD76A00AB541E /* coppelTestAppUITests.swift */; };
 		4E77F24B293FD76A00AB541E /* coppelTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F24A293FD76A00AB541E /* coppelTestAppUITestsLaunchTests.swift */; };
+		4EE7447E293FE5DC000237A6 /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7447C293FE5DC000237A6 /* MoviesCollectionViewCell.swift */; };
+		4EE7447F293FE5DC000237A6 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7447D293FE5DC000237A6 /* MoviesCollectionViewCell.xib */; };
+		4EE74481293FF237000237A6 /* EnumsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE74480293FF237000237A6 /* EnumsExtension.swift */; };
+		4EE74484293FF4B9000237A6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE74483293FF4B9000237A6 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,8 @@
 		4E77F224293FD76900AB541E /* coppelTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coppelTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E77F227293FD76900AB541E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E77F229293FD76900AB541E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E77F22B293FD76900AB541E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4E77F22E293FD76900AB541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4E77F22B293FD76900AB541E /* MoviesHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesHomeViewController.swift; sourceTree = "<group>"; };
+		4E77F22E293FD76900AB541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MoviesHome.storyboard; sourceTree = "<group>"; };
 		4E77F230293FD76A00AB541E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E77F233293FD76A00AB541E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E77F235293FD76A00AB541E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		4E77F244293FD76A00AB541E /* coppelTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coppelTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E77F248293FD76A00AB541E /* coppelTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coppelTestAppUITests.swift; sourceTree = "<group>"; };
 		4E77F24A293FD76A00AB541E /* coppelTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coppelTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4EE7447C293FE5DC000237A6 /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4EE7447D293FE5DC000237A6 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
+		4EE74480293FF237000237A6 /* EnumsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsExtension.swift; sourceTree = "<group>"; };
+		4EE74483293FF4B9000237A6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +107,11 @@
 		4E77F226293FD76900AB541E /* coppelTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				4EE74474293FE015000237A6 /* Login */,
+				4EE74475293FE01F000237A6 /* HomeMovies */,
+				4EE7447A293FE2DF000237A6 /* Generics */,
 				4E77F227293FD76900AB541E /* AppDelegate.swift */,
 				4E77F229293FD76900AB541E /* SceneDelegate.swift */,
-				4E77F22B293FD76900AB541E /* ViewController.swift */,
-				4E77F22D293FD76900AB541E /* Main.storyboard */,
 				4E77F230293FD76A00AB541E /* Assets.xcassets */,
 				4E77F232293FD76A00AB541E /* LaunchScreen.storyboard */,
 				4E77F235293FD76A00AB541E /* Info.plist */,
@@ -125,6 +134,89 @@
 				4E77F24A293FD76A00AB541E /* coppelTestAppUITestsLaunchTests.swift */,
 			);
 			path = coppelTestAppUITests;
+			sourceTree = "<group>";
+		};
+		4EE74474293FE015000237A6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4EE74475293FE01F000237A6 /* HomeMovies */ = {
+			isa = PBXGroup;
+			children = (
+				4EE74479293FE080000237A6 /* Views */,
+				4EE74476293FE04D000237A6 /* Model */,
+				4EE74477293FE053000237A6 /* View */,
+				4EE74478293FE057000237A6 /* ViewModel */,
+				4EE7447B293FE5A3000237A6 /* cellsMovies */,
+			);
+			path = HomeMovies;
+			sourceTree = "<group>";
+		};
+		4EE74476293FE04D000237A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EE74477293FE053000237A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E77F22B293FD76900AB541E /* MoviesHomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EE74478293FE057000237A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EE74479293FE080000237A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E77F22D293FD76900AB541E /* MoviesHome.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4EE7447A293FE2DF000237A6 /* Generics */ = {
+			isa = PBXGroup;
+			children = (
+				4EE744852940354E000237A6 /* Others */,
+				4EE74482293FF4A9000237A6 /* Extensions */,
+			);
+			path = Generics;
+			sourceTree = "<group>";
+		};
+		4EE7447B293FE5A3000237A6 /* cellsMovies */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7447C293FE5DC000237A6 /* MoviesCollectionViewCell.swift */,
+				4EE7447D293FE5DC000237A6 /* MoviesCollectionViewCell.xib */,
+			);
+			path = cellsMovies;
+			sourceTree = "<group>";
+		};
+		4EE74482293FF4A9000237A6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EE74483293FF4B9000237A6 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EE744852940354E000237A6 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				4EE74480293FF237000237A6 /* EnumsExtension.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +325,8 @@
 			files = (
 				4E77F234293FD76A00AB541E /* LaunchScreen.storyboard in Resources */,
 				4E77F231293FD76A00AB541E /* Assets.xcassets in Resources */,
-				4E77F22F293FD76900AB541E /* Main.storyboard in Resources */,
+				4E77F22F293FD76900AB541E /* MoviesHome.storyboard in Resources */,
+				4EE7447F293FE5DC000237A6 /* MoviesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E77F22C293FD76900AB541E /* ViewController.swift in Sources */,
+				4E77F22C293FD76900AB541E /* MoviesHomeViewController.swift in Sources */,
+				4EE74481293FF237000237A6 /* EnumsExtension.swift in Sources */,
 				4E77F228293FD76900AB541E /* AppDelegate.swift in Sources */,
+				4EE74484293FF4B9000237A6 /* ColorExtension.swift in Sources */,
 				4E77F22A293FD76900AB541E /* SceneDelegate.swift in Sources */,
+				4EE7447E293FE5DC000237A6 /* MoviesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +393,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E77F22D293FD76900AB541E /* Main.storyboard */ = {
+		4E77F22D293FD76900AB541E /* MoviesHome.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4E77F22E293FD76900AB541E /* Base */,
 			);
-			name = Main.storyboard;
+			name = MoviesHome.storyboard;
 			sourceTree = "<group>";
 		};
 		4E77F232293FD76A00AB541E /* LaunchScreen.storyboard */ = {
@@ -441,10 +537,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = coppelTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = MoviesHome.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = MoviesHome;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +549,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coppelTestApp.RamonReyes.coppelTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,10 +569,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = coppelTestApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = MoviesHome.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = MoviesHome;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +581,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = coppelTestApp.RamonReyes.coppelTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
