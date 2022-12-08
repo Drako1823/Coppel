@@ -83,7 +83,7 @@
 		4EE744892940378A000237A6 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = CoppelTestApp/Generics/Extensions/IntExtension.swift; sourceTree = SOURCE_ROOT; };
 		4EE7448B294037D5000237A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = CoppelTestApp/Generics/Extensions/UIImageExtension.swift; sourceTree = SOURCE_ROOT; };
 		4EE7448E29403938000237A6 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = CoppelTestApp/Generics/ProgressView/ProgressView.swift; sourceTree = SOURCE_ROOT; };
-		4EE74491294039A0000237A6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = CoppelTestApp/Generics/Reachability.swift; sourceTree = SOURCE_ROOT; };
+		4EE74491294039A0000237A6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = coppelTestApp/Generics/Others/Reachability.swift; sourceTree = SOURCE_ROOT; };
 		4EE7449429403A1A000237A6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = CoppelTestApp/Generics/AlertView/AlertView.swift; sourceTree = SOURCE_ROOT; };
 		4EE7449729403DFB000237A6 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesViewModel.swift; path = CoppelTestApp/ViewModel/MoviesViewModel.swift; sourceTree = SOURCE_ROOT; };
 		4EE7449A29403E15000237A6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = CoppelTestApp/Model/Model.swift; sourceTree = SOURCE_ROOT; };
@@ -216,7 +216,6 @@
 			children = (
 				4E934D542941B7EB002E8634 /* WebSite */,
 				4EE74493294039FF000237A6 /* AlertView */,
-				4EE7449029403992000237A6 /* Networking */,
 				4EE7448D29403890000237A6 /* ProgressView */,
 				4EE7448629403727000237A6 /* ServiceManager */,
 				4EE744852940354E000237A6 /* Others */,
@@ -247,6 +246,7 @@
 		4EE744852940354E000237A6 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				4EE74491294039A0000237A6 /* Reachability.swift */,
 				4EE74480293FF237000237A6 /* EnumsExtension.swift */,
 			);
 			path = Others;
@@ -266,14 +266,6 @@
 				4EE7448E29403938000237A6 /* ProgressView.swift */,
 			);
 			path = ProgressView;
-			sourceTree = "<group>";
-		};
-		4EE7449029403992000237A6 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				4EE74491294039A0000237A6 /* Reachability.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		4EE74493294039FF000237A6 /* AlertView */ = {
@@ -392,7 +384,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "coppelTestApp" */;
+			buildConfigurationList = 4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "CoppelTestApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -787,7 +779,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "coppelTestApp" */ = {
+		4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "CoppelTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E77F24C293FD76A00AB541E /* Debug */,

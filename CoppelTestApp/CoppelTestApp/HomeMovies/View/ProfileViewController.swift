@@ -19,9 +19,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    lazy var vmMovies = MoviesViewModel()
+//    lazy var vmMovies = MoviesViewModel()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imgProfile.layer.cornerRadius = imgProfile.frame.size.height / 2
@@ -29,16 +28,16 @@ class ProfileViewController: UIViewController {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if let vc = segue.destination as? DetailMovieViewController, let iRowSelected = sender as? Int {
-            let movieSelected = vmMovies.getSelectedMovieLocal(movieSelected: iRowSelected)
-            vc.iId = movieSelected?.iId ?? 0
-            
-                vc.loadMovie()
-                vc.loadTV()
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//        if let vc = segue.destination as? DetailMovieViewController, let iRowSelected = sender as? Int {
+//            let movieSelected = vmMovies.getSelectedMovieLocal(movieSelected: iRowSelected)
+//            vc.iId = movieSelected?.iId ?? 0
+//
+//                vc.loadMovie()
+//                vc.loadTV()
+//        }
+//    }
     
 }
 
