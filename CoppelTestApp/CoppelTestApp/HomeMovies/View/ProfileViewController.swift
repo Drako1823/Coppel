@@ -13,9 +13,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var cllProfileFav: UICollectionView!{
         didSet {
-            cllProfileFav.delegate = self
-            cllProfileFav.dataSource = self
-            cllProfileFav.register(UINib(nibName: "MoviesCollectionViewCell", bundle: Bundle(for: MoviesCollectionViewCell.self)), forCellWithReuseIdentifier: "MoviesCollectionViewCell")
+//            cllProfileFav.delegate = self
+//            cllProfileFav.dataSource = self
+//            cllProfileFav.register(UINib(nibName: "MoviesCollectionViewCell", bundle: Bundle(for: MoviesCollectionViewCell.self)), forCellWithReuseIdentifier: "MoviesCollectionViewCell")
         }
     }
     
@@ -42,29 +42,26 @@ class ProfileViewController: UIViewController {
     
 }
 
-extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        vmMovies.getNumberRowsMoviesLocal()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoviesCollectionViewCell", for: indexPath) as? MoviesCollectionViewCell else { return UICollectionViewCell() }
-        cell.customCell(movie: vmMovies.getSelectedMovieLocal(movieSelected: indexPath.row))
-        cell.backgroundColor = UIColor.rgb(red: 28, green: 39, blue: 44)
-        cell.layer.shouldRasterize = true
-        cell.layer.rasterizationScale = UIScreen.main.scale
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width:self.view.frame.size.width / 2.3, height: 370)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "SENDDETAILMOVIEWVC", sender: indexPath.row)
-        
-    }
-}
+//extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        vmMovies.getNumberRowsMoviesLocal()
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MoviesCollectionViewCell", for: indexPath) as? MoviesCollectionViewCell else { return UICollectionViewCell() }
+//        cell.customCell(movie: vmMovies.getSelectedMovieLocal(movieSelected: indexPath.row))
+//        cell.backgroundColor = UIColor.rgb(red: 28, green: 39, blue: 44)
+//        cell.layer.shouldRasterize = true
+//        cell.layer.rasterizationScale = UIScreen.main.scale
+//
+//        return cell
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width:self.view.frame.size.width / 2.3, height: 370)
+//    }
+//
+//    
+//}
