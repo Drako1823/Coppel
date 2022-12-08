@@ -63,6 +63,7 @@ class LoginViewController: UIViewController {
             if error.code.isSuccess{
                 ProgressView.hideHUDAddedToWindow()
                 self.lblError.text = ""
+                UserDefaults.standard.setValue("\(self.txfUsername.text ?? "")", forKey: "userName")
                 self.performSegue(withIdentifier: "SHOWHOMEMOVIESVC", sender: nil)
             }else{
                 ProgressView.hideHUDAddedToWindow()

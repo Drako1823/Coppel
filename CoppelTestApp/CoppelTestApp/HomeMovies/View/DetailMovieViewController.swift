@@ -16,6 +16,7 @@ class DetailMovieViewController: UIViewController {
             imgMovie.layer.masksToBounds = true
         }
     }
+    @IBOutlet weak var imgStar: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var btnHomePage: UIButton!
@@ -50,6 +51,7 @@ class DetailMovieViewController: UIViewController {
         self.vmDetailMovie.getDetailMovie(idMovie: iId, bShowLoader: true) { [weak self] error in
             guard let self = self else { return }
             if error.code.isSuccess{
+                self.typeDetailMovies = .movie
                 self.loadInfoMovie()
                 self.cllCompanies.reloadData()
             }else{
@@ -62,6 +64,7 @@ class DetailMovieViewController: UIViewController {
         self.vmDetailMovie.getDetailTV(idTV: iId, bShowLoader: true ) { [weak self] error in
             guard let self = self else { return }
             if error.code.isSuccess{
+                self.typeDetailMovies = .tv
                 self.loadInfoTV()
                 self.cllCompanies.reloadData()
             }else{

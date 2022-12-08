@@ -16,6 +16,7 @@ final class MoviesViewModel : Decodable{
     }
     
     private var allMovies: allMovies?
+    private var localAllMovies : [movieSection]?
     
     required init(from decoder: Decoder) throws {}
 
@@ -36,6 +37,14 @@ final class MoviesViewModel : Decodable{
             }
         }
     }
+    
+    func loadFavorites() {
+        if let data = UserDefaults.standard.data(forKey: "saveFavorites") {
+            if let decoded = try? JSONDecoder().decode([movieSection].self, from: data) {
+                self.localAllMovies = decoded
+            }
+        }
+    }
 
 }
 
@@ -46,6 +55,14 @@ extension MoviesViewModel {
     
     func getSelectedMovie(movieSelected: Int) -> movieSection? {
         return allMovies?.arrMovies?[movieSelected]
+    }
+    
+    func getNumberRowsMoviesLocal() -> Int {
+        return localAllMovies?.count ?? 0
+    }
+    
+    func getSelectedMovieLocal(movieSelected: Int) -> movieSection? {
+        return localAllMovies?[movieSelected]
     }
     
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E1541C42941FFAE0020F6B8 /* MoviesHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E77F22D293FD76900AB541E /* MoviesHome.storyboard */; };
 		4E1541C52941FFB20020F6B8 /* MoviesHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1541C22941FF660020F6B8 /* MoviesHomeViewController.swift */; };
+		4E47A991294255FE00E3B50D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47A990294255FE00E3B50D /* ProfileViewController.swift */; };
 		4E77F228293FD76900AB541E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F227293FD76900AB541E /* AppDelegate.swift */; };
 		4E77F22A293FD76900AB541E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E77F229293FD76900AB541E /* SceneDelegate.swift */; };
 		4E77F231293FD76A00AB541E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E77F230293FD76A00AB541E /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		4E1541C22941FF660020F6B8 /* MoviesHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesHomeViewController.swift; sourceTree = "<group>"; };
+		4E47A990294255FE00E3B50D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4E77F224293FD76900AB541E /* coppelTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coppelTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E77F227293FD76900AB541E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E77F229293FD76900AB541E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				4E1541C22941FF660020F6B8 /* MoviesHomeViewController.swift */,
 				4EE7449E2941800C000237A6 /* DetailMovieViewController.swift */,
 				4E934D592941C655002E8634 /* LoginViewController.swift */,
+				4E47A990294255FE00E3B50D /* ProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -389,7 +392,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "CoppelTestApp" */;
+			buildConfigurationList = 4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "coppelTestApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -458,6 +461,7 @@
 				4EE744A72941AE2C000237A6 /* MovieDetailCollectionViewCell.swift in Sources */,
 				4EE7449829403DFB000237A6 /* MoviesViewModel.swift in Sources */,
 				4EE7448A2940378A000237A6 /* IntExtension.swift in Sources */,
+				4E47A991294255FE00E3B50D /* ProfileViewController.swift in Sources */,
 				4EE74492294039A0000237A6 /* Reachability.swift in Sources */,
 				4EE7448F29403938000237A6 /* ProgressView.swift in Sources */,
 				4EE7449F2941800C000237A6 /* DetailMovieViewController.swift in Sources */,
@@ -783,7 +787,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "CoppelTestApp" */ = {
+		4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "coppelTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E77F24C293FD76A00AB541E /* Debug */,

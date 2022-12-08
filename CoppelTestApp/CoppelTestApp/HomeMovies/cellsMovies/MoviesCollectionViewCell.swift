@@ -37,6 +37,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
         lblDate.textColor = UIColor.rgb(red: 0, green: 255, blue: 0)
         lblScore.textColor = UIColor.rgb(red: 0, green: 255, blue: 0)
         lblDescription.textColor = UIColor.rgb(red: 255, green: 255, blue: 255)
+        
     }
     
     override func prepareForReuse() {

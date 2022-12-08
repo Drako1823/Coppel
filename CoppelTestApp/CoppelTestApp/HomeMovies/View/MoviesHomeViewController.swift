@@ -27,24 +27,8 @@ class MoviesHomeViewController: UIViewController {
         super.viewDidLoad()
         
         loadMovies(option: .popular, withLoader: true)
-        //        getToken()
     }
-    
-//    func getToken() {
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self = self else { return }
-//            self.vmToken.getTokenKey(option: .apiKey, bShowLoader: true) { [weak self] error in
-//                guard let self = self else { return }
-//                if error.code.isSuccess{
-//                    self.present(AlertGeneric.simpleWith(message: "Se genero un token correcto: \(error.code.description) "), animated: true, completion: nil)
-//
-//                }else{
-//                    self.present(AlertGeneric.simpleWith(message: "Se genero un error en el token: \(error.code.description) "), animated: true, completion: nil)
-//                }
-//            }
-//        }
-//    }
-    
+        
     func loadMovies(option: typeMovies, withLoader: Bool){
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -59,33 +43,27 @@ class MoviesHomeViewController: UIViewController {
         }
     }
     
-//    @IBAction func btnProfile(_ sender: UIButton) {
-//        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-//
-//        // Create your actions - take a look at different style attributes
-//        let reportAction = UIAlertAction(title: "Report abuse", style: .default) { (action) in
-//            // observe it in the buttons block, what button has been pressed
-//            print("didPress report abuse")
-//        }
-//
-//        let blockAction = UIAlertAction(title: "Block", style: .destructive) { (action) in
-//            print("didPress block")
-//        }
-//
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-//            print("didPress cancel")
-//        }
-//
-//        // Add the actions to your actionSheet
-//        actionSheet.addAction(reportAction)
-//        actionSheet.addAction(blockAction)
-//        actionSheet.addAction(cancelAction)
-//        // Present the controller
-//        self.present(actionSheet, animated: true, completion: nil)
-//    }
+    
+    @IBAction func btnProfile(_ sender: UIBarButtonItem) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let viewProfile = UIAlertAction(title: "View Profile", style: .default) { (action) in
+            print("didPress report abuse")
+            self.performSegue(withIdentifier: "SHOWPROFILEVC", sender: nil)
+        }
+        let logOut = UIAlertAction(title: "Log Out", style: .destructive) { (action) in
+            print("didPress block")
+            self.navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            print("didPress cancel")
+        }
+        actionSheet.addAction(viewProfile)
+        actionSheet.addAction(logOut)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true, completion: nil)
+    }
     
     @IBAction func sgTapMovies(_ sender: UISegmentedControl) {
-        //        var selection: typeMovies = .popular
         switch sender.selectedSegmentIndex {
         case 0:
             selection = .popular

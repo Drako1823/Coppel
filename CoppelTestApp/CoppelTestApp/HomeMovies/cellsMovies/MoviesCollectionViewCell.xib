@@ -20,7 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="250" height="230"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="230" id="H4C-qK-1jr"/>
-                            <constraint firstAttribute="width" constant="250" id="n7Z-eC-LIC"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ata-IO-OsQ">
