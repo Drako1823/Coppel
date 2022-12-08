@@ -12,7 +12,7 @@ struct allMovies : Codable{
     var arrMovies       :[movieSection]?
     var iTotalResults   :Int?
     var iTotalPages     :Int?
-
+    
     init(from decoder: Decoder) throws {
         let container    = try decoder.container(keyedBy: CodingKeys.self)
         iPages           =  try (container.decodeIfPresent(Int.self, forKey: .iPages))
@@ -48,7 +48,7 @@ struct movieSection : Codable{
     var arrOriginCountry               :[String]?
     var strName                        :String?
     var strOriginalName                :String?
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         strPoster_path                 =  try (container.decodeIfPresent(String.self, forKey: .strPoster_path))
@@ -69,7 +69,7 @@ struct movieSection : Codable{
         arrOriginCountry               =  try (container.decodeIfPresent([String].self, forKey: .arrOriginCountry))
         strName                        =  try (container.decodeIfPresent(String.self, forKey: .strName))
         strOriginalName                =  try (container.decodeIfPresent(String.self, forKey: .strOriginalName))
-
+        
     }
     
     private enum CodingKeys : String, CodingKey{
@@ -99,7 +99,7 @@ struct apiKey : Codable{
     var bSuccess       :Bool?
     var strExpires     :String?
     var strToken       :String?
-
+    
     init(from decoder: Decoder) throws {
         let container  = try decoder.container(keyedBy: CodingKeys.self)
         bSuccess       =  try (container.decodeIfPresent(Bool.self, forKey: .bSuccess))
@@ -111,6 +111,21 @@ struct apiKey : Codable{
         case bSuccess       = "success"
         case strExpires     = "expires_at"
         case strToken       = "request_token"
-        }
     }
+}
 
+struct sessionNew : Codable{
+    var bSuccess       :Bool?
+    var strSession     :String?
+    
+    init(from decoder: Decoder) throws {
+        let container   = try decoder.container(keyedBy: CodingKeys.self)
+        bSuccess        =  try (container.decodeIfPresent(Bool.self, forKey: .bSuccess))
+        strSession      =  try (container.decodeIfPresent(String.self, forKey: .strSession))
+    }
+    
+    private enum CodingKeys : String, CodingKey{
+        case bSuccess       = "success"
+        case strSession     = "session_id"
+    }
+}

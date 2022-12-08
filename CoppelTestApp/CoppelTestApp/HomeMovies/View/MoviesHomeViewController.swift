@@ -21,7 +21,8 @@ class MoviesHomeViewController: UIViewController {
     
     lazy var vmMovies = MoviesViewModel()
     lazy var vmToken = TokenViewModel()
-    
+    lazy var selection: typeMovies = .popular
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,20 +30,20 @@ class MoviesHomeViewController: UIViewController {
         //        getToken()
     }
     
-    func getToken() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.vmToken.getTokenKey(option: .apiKey, bShowLoader: true) { [weak self] error in
-                guard let self = self else { return }
-                if error.code.isSuccess{
-                    self.present(AlertGeneric.simpleWith(message: "Se genero un token correcto: \(error.code.description) "), animated: true, completion: nil)
-                    
-                }else{
-                    self.present(AlertGeneric.simpleWith(message: "Se genero un error en el token: \(error.code.description) "), animated: true, completion: nil)
-                }
-            }
-        }
-    }
+//    func getToken() {
+//        DispatchQueue.main.async { [weak self] in
+//            guard let self = self else { return }
+//            self.vmToken.getTokenKey(option: .apiKey, bShowLoader: true) { [weak self] error in
+//                guard let self = self else { return }
+//                if error.code.isSuccess{
+//                    self.present(AlertGeneric.simpleWith(message: "Se genero un token correcto: \(error.code.description) "), animated: true, completion: nil)
+//
+//                }else{
+//                    self.present(AlertGeneric.simpleWith(message: "Se genero un error en el token: \(error.code.description) "), animated: true, completion: nil)
+//                }
+//            }
+//        }
+//    }
     
     func loadMovies(option: typeMovies, withLoader: Bool){
         DispatchQueue.main.async { [weak self] in
@@ -58,12 +59,33 @@ class MoviesHomeViewController: UIViewController {
         }
     }
     
-    @IBAction func btnProfile(_ sender: UIButton) {
-        print("Send to profile")
-    }
+//    @IBAction func btnProfile(_ sender: UIButton) {
+//        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+//
+//        // Create your actions - take a look at different style attributes
+//        let reportAction = UIAlertAction(title: "Report abuse", style: .default) { (action) in
+//            // observe it in the buttons block, what button has been pressed
+//            print("didPress report abuse")
+//        }
+//
+//        let blockAction = UIAlertAction(title: "Block", style: .destructive) { (action) in
+//            print("didPress block")
+//        }
+//
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+//            print("didPress cancel")
+//        }
+//
+//        // Add the actions to your actionSheet
+//        actionSheet.addAction(reportAction)
+//        actionSheet.addAction(blockAction)
+//        actionSheet.addAction(cancelAction)
+//        // Present the controller
+//        self.present(actionSheet, animated: true, completion: nil)
+//    }
     
     @IBAction func sgTapMovies(_ sender: UISegmentedControl) {
-        var selection: typeMovies = .popular
+        //        var selection: typeMovies = .popular
         switch sender.selectedSegmentIndex {
         case 0:
             selection = .popular
@@ -81,6 +103,21 @@ class MoviesHomeViewController: UIViewController {
             break
         }
         loadMovies(option: selection, withLoader: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if let vc = segue.destination as? DetailMovieViewController, let iRowSelected = sender as? Int {
+            let movieSelected = vmMovies.getSelectedMovie(movieSelected: iRowSelected)
+            vc.iId = movieSelected?.iId ?? 0
+            if selection == .popular || selection == .topRated{
+                vc.typeDetailMovies = .movie
+                vc.loadMovie()
+            }else {
+                vc.typeDetailMovies = .tv
+                vc.loadTV()
+            }
+        }
     }
     
 }
@@ -104,5 +141,10 @@ extension MoviesHomeViewController: UICollectionViewDelegate, UICollectionViewDa
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:self.view.frame.size.width / 2.3, height: 370)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "SENDDETAILMOVIEWVC", sender: indexPath.row)
+        
     }
 }

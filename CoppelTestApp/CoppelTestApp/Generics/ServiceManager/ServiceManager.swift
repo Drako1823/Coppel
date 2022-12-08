@@ -10,6 +10,15 @@ import Foundation
 enum ProviderName : String{
     case baseCore = "BASE_URL"
 }
+enum TypeApiKey : String{
+    case normal = "API_KEY"
+    case moreLanguage = "API_KEY_LANGUAGE"
+}
+enum TypePage : String{
+    case pageNormal = "&page=1"
+    case pageMissing = ""
+}
+
 enum HTTPMethod:String{
     case get    = "GET"
     case post   = "POST"
@@ -21,14 +30,20 @@ struct Resource<T : Codable>{
     var httpMethod      : HTTPMethod = .get
     var showProgress    : Bool = false
     var provider        : ProviderName?
+    var params          :[String:Any]?
     var domain          : String?
     
-    init(_ endpoint : String?,_ page : String = "", _ provider: ProviderName = .baseCore){
+    init(_ endpoint : String?,_ page : TypePage = .pageMissing, _ apikeyType: TypeApiKey = .moreLanguage, _ provider: ProviderName = .baseCore){
         guard let serverStringURL = Bundle(for: Webservice.self).object(forInfoDictionaryKey: provider.rawValue) as? String else {
             self.url = nil
             return
         }
-        let finalURLString = "\(serverStringURL)\(endpoint ?? "")?api_key=c2c11bcd4f8c88a26a997312f05ec5ea&language=en-US\(page))"
+        //        ?api_key=c2c11bcd4f8c88a26a997312f05ec5ea&language=en-US
+        guard let serverApiKey = Bundle(for: Webservice.self).object(forInfoDictionaryKey: apikeyType.rawValue) as? String else {
+            self.url = nil
+            return
+        }
+        let finalURLString = (page.rawValue.count >= 1) ? "\(serverStringURL)\(endpoint ?? "")\(serverApiKey)\(page))" : "\(serverStringURL)\(endpoint ?? "")\(serverApiKey)"
         self.url = URL(string: finalURLString) ?? nil
         self.provider = provider
     }
@@ -59,6 +74,13 @@ final class Webservice {
         if let url = resource.url{
             var request = URLRequest(url: url)
             request.httpMethod = resource.httpMethod.rawValue
+            if let params = resource.params {
+                let bodyData = try? JSONSerialization.data(
+                    withJSONObject: params,
+                    options: []
+                )
+                request.httpBody = bodyData
+            }
             switch resource.provider {
             case .baseCore:
                 request.addValue("application/json", forHTTPHeaderField: "Content-Type")

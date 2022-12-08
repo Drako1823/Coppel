@@ -21,8 +21,7 @@ final class MoviesViewModel : Decodable{
 
     func loadAllMovies(option: typeMovies,bShowLoader: Bool = false, withCompletionHandler handler: @escaping CompletionBlock){
         
-//        var resource = Resource<allMovies>("\(option.rawValue)\("?api_key=c2c11bcd4f8c88a26a997312f05ec5ea&language=en-US")\("&page=1")", .baseCore)
-        var resource = Resource<allMovies>("\(option.rawValue)", "&page=1",.baseCore )
+        var resource = Resource<allMovies>("\(option.rawValue)", .pageNormal, .moreLanguage, .baseCore )
         
         resource.httpMethod = .get
         resource.showProgress = bShowLoader
