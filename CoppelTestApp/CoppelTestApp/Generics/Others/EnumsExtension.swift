@@ -8,6 +8,7 @@
 import Foundation
 
 enum typeMovies: String {
+    case apiKey = "authentication/token/new"
     case popular = "movie/popular"
     case topRated = "movie/top_rated"
     case onTv = "tv/on_the_air"

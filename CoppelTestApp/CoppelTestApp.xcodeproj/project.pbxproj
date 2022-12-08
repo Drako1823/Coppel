@@ -20,6 +20,15 @@
 		4EE7447F293FE5DC000237A6 /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7447D293FE5DC000237A6 /* MoviesCollectionViewCell.xib */; };
 		4EE74481293FF237000237A6 /* EnumsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE74480293FF237000237A6 /* EnumsExtension.swift */; };
 		4EE74484293FF4B9000237A6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE74483293FF4B9000237A6 /* ColorExtension.swift */; };
+		4EE7448829403736000237A6 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7448729403736000237A6 /* ServiceManager.swift */; };
+		4EE7448A2940378A000237A6 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE744892940378A000237A6 /* IntExtension.swift */; };
+		4EE7448C294037D5000237A6 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7448B294037D5000237A6 /* UIImageExtension.swift */; };
+		4EE7448F29403938000237A6 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7448E29403938000237A6 /* ProgressView.swift */; };
+		4EE74492294039A0000237A6 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE74491294039A0000237A6 /* Reachability.swift */; };
+		4EE7449529403A1A000237A6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7449429403A1A000237A6 /* AlertView.swift */; };
+		4EE7449829403DFB000237A6 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7449729403DFB000237A6 /* MoviesViewModel.swift */; };
+		4EE7449B29403E15000237A6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7449A29403E15000237A6 /* Model.swift */; };
+		4EE7449D294048A0000237A6 /* TokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7449C294048A0000237A6 /* TokenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,15 @@
 		4EE7447D293FE5DC000237A6 /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 		4EE74480293FF237000237A6 /* EnumsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumsExtension.swift; sourceTree = "<group>"; };
 		4EE74483293FF4B9000237A6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4EE7448729403736000237A6 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceManager.swift; path = CoppelTestApp/Generics/ServiceManager/ServiceManager.swift; sourceTree = SOURCE_ROOT; };
+		4EE744892940378A000237A6 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntExtension.swift; path = CoppelTestApp/Generics/Extensions/IntExtension.swift; sourceTree = SOURCE_ROOT; };
+		4EE7448B294037D5000237A6 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = CoppelTestApp/Generics/Extensions/UIImageExtension.swift; sourceTree = SOURCE_ROOT; };
+		4EE7448E29403938000237A6 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = CoppelTestApp/Generics/ProgressView/ProgressView.swift; sourceTree = SOURCE_ROOT; };
+		4EE74491294039A0000237A6 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = CoppelTestApp/Generics/Reachability.swift; sourceTree = SOURCE_ROOT; };
+		4EE7449429403A1A000237A6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertView.swift; path = CoppelTestApp/Generics/AlertView/AlertView.swift; sourceTree = SOURCE_ROOT; };
+		4EE7449729403DFB000237A6 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoviesViewModel.swift; path = CoppelTestApp/ViewModel/MoviesViewModel.swift; sourceTree = SOURCE_ROOT; };
+		4EE7449A29403E15000237A6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = CoppelTestApp/Model/Model.swift; sourceTree = SOURCE_ROOT; };
+		4EE7449C294048A0000237A6 /* TokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TokenViewModel.swift; path = CoppelTestApp/ViewModel/TokenViewModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +125,8 @@
 		4E77F226293FD76900AB541E /* coppelTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				4EE74474293FE015000237A6 /* Login */,
+				4EE7449929403E0E000237A6 /* Model */,
+				4EE7449629403DE5000237A6 /* ViewModel */,
 				4EE74475293FE01F000237A6 /* HomeMovies */,
 				4EE7447A293FE2DF000237A6 /* Generics */,
 				4E77F227293FD76900AB541E /* AppDelegate.swift */,
@@ -136,30 +155,14 @@
 			path = coppelTestAppUITests;
 			sourceTree = "<group>";
 		};
-		4EE74474293FE015000237A6 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		4EE74475293FE01F000237A6 /* HomeMovies */ = {
 			isa = PBXGroup;
 			children = (
 				4EE74479293FE080000237A6 /* Views */,
-				4EE74476293FE04D000237A6 /* Model */,
 				4EE74477293FE053000237A6 /* View */,
-				4EE74478293FE057000237A6 /* ViewModel */,
 				4EE7447B293FE5A3000237A6 /* cellsMovies */,
 			);
 			path = HomeMovies;
-			sourceTree = "<group>";
-		};
-		4EE74476293FE04D000237A6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		4EE74477293FE053000237A6 /* View */ = {
@@ -168,13 +171,6 @@
 				4E77F22B293FD76900AB541E /* MoviesHomeViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4EE74478293FE057000237A6 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4EE74479293FE080000237A6 /* Views */ = {
@@ -188,6 +184,10 @@
 		4EE7447A293FE2DF000237A6 /* Generics */ = {
 			isa = PBXGroup;
 			children = (
+				4EE74493294039FF000237A6 /* AlertView */,
+				4EE7449029403992000237A6 /* Networking */,
+				4EE7448D29403890000237A6 /* ProgressView */,
+				4EE7448629403727000237A6 /* ServiceManager */,
 				4EE744852940354E000237A6 /* Others */,
 				4EE74482293FF4A9000237A6 /* Extensions */,
 			);
@@ -207,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				4EE74483293FF4B9000237A6 /* ColorExtension.swift */,
+				4EE744892940378A000237A6 /* IntExtension.swift */,
+				4EE7448B294037D5000237A6 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -217,6 +219,55 @@
 				4EE74480293FF237000237A6 /* EnumsExtension.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		4EE7448629403727000237A6 /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7448729403736000237A6 /* ServiceManager.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		4EE7448D29403890000237A6 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7448E29403938000237A6 /* ProgressView.swift */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		4EE7449029403992000237A6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4EE74491294039A0000237A6 /* Reachability.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4EE74493294039FF000237A6 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7449429403A1A000237A6 /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		4EE7449629403DE5000237A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7449729403DFB000237A6 /* MoviesViewModel.swift */,
+				4EE7449C294048A0000237A6 /* TokenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4EE7449929403E0E000237A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EE7449A29403E15000237A6 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "coppelTestApp" */;
+			buildConfigurationList = 4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "CoppelTestApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -356,7 +407,16 @@
 				4E77F228293FD76900AB541E /* AppDelegate.swift in Sources */,
 				4EE74484293FF4B9000237A6 /* ColorExtension.swift in Sources */,
 				4E77F22A293FD76900AB541E /* SceneDelegate.swift in Sources */,
+				4EE7449529403A1A000237A6 /* AlertView.swift in Sources */,
+				4EE7448C294037D5000237A6 /* UIImageExtension.swift in Sources */,
+				4EE7449B29403E15000237A6 /* Model.swift in Sources */,
+				4EE7449829403DFB000237A6 /* MoviesViewModel.swift in Sources */,
+				4EE7448A2940378A000237A6 /* IntExtension.swift in Sources */,
+				4EE74492294039A0000237A6 /* Reachability.swift in Sources */,
+				4EE7448F29403938000237A6 /* ProgressView.swift in Sources */,
+				4EE7448829403736000237A6 /* ServiceManager.swift in Sources */,
 				4EE7447E293FE5DC000237A6 /* MoviesCollectionViewCell.swift in Sources */,
+				4EE7449D294048A0000237A6 /* TokenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.themoviedb.org/3/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8K2YT6Z4CB;
@@ -563,6 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.themoviedb.org/3/";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8K2YT6Z4CB;
@@ -669,7 +731,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "coppelTestApp" */ = {
+		4E77F21F293FD76900AB541E /* Build configuration list for PBXProject "CoppelTestApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E77F24C293FD76A00AB541E /* Debug */,
